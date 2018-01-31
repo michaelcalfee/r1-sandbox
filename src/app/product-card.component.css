@@ -1,0 +1,35 @@
+.product-card-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #CCC;
+  margin: 1rem;
+  justify-content: space-between;
+}
+.controls {
+  display: flex;
+}
+.add {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+}
+.increment {
+  width: 2rem;
+}
+.quantity {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E21E26;
+}
+button {
+  background: #E21E26;
+  color: #FFF;
+  cursor: pointer; cursor: hand;
+}
+button:disabled {
+  cursor: auto;
+}

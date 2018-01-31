@@ -1,0 +1,10 @@
+<div class="product-card-inner">
+    <span>{{product.name}}</span>
+    <div class="controls">
+        <button class="add" [class.loading]="isBusy" *ngIf="!inCart" (click)="update(1)">Add</button>
+        <button class="increment" *ngIf="inCart" [disabled]="isSaving" (click)="update(quantity-1)">-</button>
+        <span class="quantity" [class.loading]="isBusy" *ngIf="inCart">{{displayQuantity}} in cart</span>
+        <input class="sr-only" type="number" [(ngModel)]="displayQuantity" />
+        <button class="increment" *ngIf="inCart" [disabled]="isSaving" (click)="update(quantity+1)">+</button>
+    </div>
+</div>

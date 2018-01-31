@@ -1,0 +1,15 @@
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  width: 33%;
+  height: 10rem;
+  flex-shrink: 0;
+}
+
+.product-card {
+  display: flex;
+  height: 100%;
+}

@@ -52,7 +52,7 @@ export class CartService {
   updateSlowly(product: Product): Promise<Product> {
     return new Promise(resolve => {
       // Simulate server latency with 2 second delay
-      setTimeout(() => resolve(this.update(product)), 1000);
+      setTimeout(() => resolve(this.update(product)), 500);
     });
   }
 

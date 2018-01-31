@@ -9,6 +9,10 @@ import { Product } from './product';
   styleUrls: [ './product-card.component.css' ]
 })
 export class ProductCardComponent implements OnInit {
+
+  static readonly timeout = 300;
+  static readonly timeoutQty = 4;
+
   @Input('product') product: Product;
   inCart: boolean;
   isBusy: boolean;
@@ -36,13 +40,18 @@ export class ProductCardComponent implements OnInit {
   update(quantity: number): void {
     this.isBusy = true;
     this.quantity = quantity;
-    if (this.timer) {
-      window.clearTimeout(this.timer);
-      this.status = 'Queueing (quantity: ' + this.quantity + ')';
-    }
-    this.timer = window.setTimeout(() => {
+    if (this.quantity <= ProductCardComponent.timeoutQty) {
       this.save(this.quantity);
-    }, 300);
+    }
+    else {
+      if (this.timer) {
+        window.clearTimeout(this.timer);
+        this.status = 'Queueing (quantity: ' + this.quantity + ')';
+      }
+      this.timer = window.setTimeout(() => {
+        this.save(this.quantity);
+      }, ProductCardComponent.timeout);
+    }
   }
 
   save(quantity: number): void {

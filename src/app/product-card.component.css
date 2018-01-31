@@ -9,6 +9,10 @@
 }
 .controls {
   display: flex;
+  flex-shrink: 0
+}
+.status {
+  font-size: 0.8rem;
 }
 .add {
   display: block;

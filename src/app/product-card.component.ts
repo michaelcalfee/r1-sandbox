@@ -16,6 +16,7 @@ export class ProductCardComponent implements OnInit {
   quantity: number;
   displayQuantity: number;
   timer: number;
+  status: string;
 
   constructor(
     private cartService: CartService
@@ -29,7 +30,7 @@ export class ProductCardComponent implements OnInit {
     this.quantity = this.displayQuantity = this.product.quantity;
     this.inCart = this.product.quantity > 0;
     this.isBusy = this.isSaving = false;
-    console.log('...request complete');
+    this.status = '...request complete';
   }
 
   update(quantity: number): void {
@@ -37,7 +38,7 @@ export class ProductCardComponent implements OnInit {
     this.quantity = quantity;
     if (this.timer) {
       window.clearTimeout(this.timer);
-      console.log('Cancelled API request with fast click...');
+      this.status = 'Queueing (quantity: ' + this.quantity + ')';
     }
     this.timer = window.setTimeout(() => {
       this.save(this.quantity);
@@ -47,7 +48,7 @@ export class ProductCardComponent implements OnInit {
   save(quantity: number): void {
     this.isSaving = true;
     this.product.quantity = quantity;
-    console.log('Request to API...', this.product);
+    this.status = 'Sending request to API (quantity: ' + quantity + ')...';
     this.cartService.updateSlowly(this.product)
       .then(() => this.updateStatus());
   }

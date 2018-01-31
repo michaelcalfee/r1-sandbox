@@ -47,6 +47,10 @@ ul {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.container {
+  max-width: 960px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

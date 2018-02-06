@@ -1,5 +1,6 @@
 <div class="container">
-  <h2>Products</h2>
+  <h2>{{title}}</h2>
+  <p>{{description}}</p>
   <ul class="products">
     <li *ngFor="let p of products">
         <product-card class="product-card" [product]="p"></product-card>

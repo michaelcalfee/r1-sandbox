@@ -4,7 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductsComponent }        from './products.component';
 
 const routes: Routes = [
-  { path: '', component: ProductsComponent, pathMatch: 'full' }
+  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: 'add-to-cart',  component: ProductsComponent }
 ];
 
 @NgModule({

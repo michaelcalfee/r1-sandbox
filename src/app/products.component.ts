@@ -11,7 +11,8 @@ import { CartService } from './cart.service';
 })
 
 export class ProductsComponent implements OnInit {
-  title = 'Products';
+  title = 'Add to cart';
+  description = 'This is technical exploration of API call queuing only and not intended to represent the entire interaction design nor act as a reference implementation.';
   products: Product[];
 
   constructor(

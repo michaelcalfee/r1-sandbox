@@ -11,7 +11,7 @@ import { Product } from './product';
 export class ProductCardComponent implements OnInit {
 
   static readonly timeout = 300;
-  static readonly timeoutQty = 4;
+  static readonly timeoutQty = 1;
 
   @Input('product') product: Product;
   inCart: boolean;

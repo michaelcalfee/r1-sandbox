@@ -6,5 +6,6 @@ export class Coupon {
     expirationDate: string;
     url: string;
     isClipped: boolean;
+    isOffer: boolean;
   }
   

@@ -15,7 +15,7 @@
             <span>One time coupon</span>
             <span class="expiration">Expires<br> {{coupon.expirationDate}}</span>
         </span>
-        <a *ngIf="isClipped" href="{{coupon.url}}">Shop Offer</a>
+        <a *ngIf="coupon.isOffer" href="{{coupon.url}}">Shop Offer</a>
         <button class="clip" [disabled]="isClipped" [class.loading]="isBusy" (click)="clip()">{{isClipped ? clippedText : clipText}}</button>
     </div>
 </div>

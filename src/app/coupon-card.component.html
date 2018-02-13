@@ -12,7 +12,7 @@
     </span>
     <div class="controls">
         <span class="terms">
-            <span>One time coupon</span>
+            <span *ngIf="!coupon.isOffer">One time coupon</span>
             <span class="expiration">Expires<br> {{coupon.expirationDate}}</span>
         </span>
         <a *ngIf="coupon.isOffer" href="{{coupon.url}}">Shop Offer</a>

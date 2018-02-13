@@ -31,9 +31,6 @@
   left: 34px;
   transition: transform 0.2s ease-out;
 }
-.coupon-card-inner:hover .corner [class^="icon-"], .corner [class*=" icon-"] {
-  transform: rotate(45deg);
-}
 .folded-corner {
   border-color: #fff #fff transparent transparent;
   box-shadow: 2px -2px 0px #fff, 0 1px 1px rgba(0,0,0,0.1), -1px 1px 1px rgba(0,0,0,0.1);
@@ -41,6 +38,9 @@
 .clipped .corner {
   border-color: #CCC #CCC transparent transparent;
   border-width: 0 61px 61px 0;
+}
+.clipped .corner [class^="icon-"], .clipped .corner [class*=" icon-"] {
+  transform: rotate(45deg);
 }
 .clipped .folded-corner {
   border-width: 0 60px 60px 0;

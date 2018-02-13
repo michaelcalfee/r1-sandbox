@@ -1,0 +1,97 @@
+.coupon-card-inner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #CCC;
+  margin: 1rem;
+  justify-content: space-between;
+}
+.corner, .folded-corner {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  border-width: 0;
+  border-style: solid;
+  transition: border-width 0.2s ease-out, border-color 0.2s ease-out;
+}
+.corner {
+  border-width: 0 60px 60px 0;
+  border-color: #E41720 #E41720 transparent transparent;
+  color: #fff;
+}
+.corner [class^="icon-"], .corner [class*=" icon-"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  top: 8px;
+  left: 34px;
+  transition: transform 0.2s ease-out;
+}
+.coupon-card-inner:hover .corner [class^="icon-"], .corner [class*=" icon-"] {
+  transform: rotate(45deg);
+}
+.folded-corner {
+  border-color: #fff #fff transparent transparent;
+  box-shadow: 2px -2px 0px #fff, 0 1px 1px rgba(0,0,0,0.1), -1px 1px 1px rgba(0,0,0,0.1);
+}
+.clipped .corner {
+  border-color: #CCC #CCC transparent transparent;
+  border-width: 0 61px 61px 0;
+}
+.clipped .folded-corner {
+  border-width: 0 60px 60px 0;
+}
+.name, .description {
+  margin-bottom: 2rem;
+}
+.description span {
+  font-size: 0.7rem;
+  display: block;
+}
+.description span.product-name {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+.terms {
+  font-size: 0.6rem;
+}
+.terms span {
+  display: block;
+}
+.expiration {
+  margin-top: 0.2rem;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0
+}
+.controls a {
+  font-size: 0.7rem;
+  padding: 0.5rem;
+}
+.clip {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  height: 2.1rem;
+  padding: 0;
+  flex-basis: 40%;
+}
+button {
+  color: #E41720;
+  border: 1px solid #E41720;
+  background: #FFF;
+  cursor: pointer; cursor: hand;
+}
+button:disabled {
+  cursor: auto;
+  color: #CCC;
+  border-color: #CCC;
+}

@@ -12,6 +12,8 @@ import { CartDataService }  from './cart-data.service';
 import { AppComponent } from './app.component';
 import { ProductCardComponent } from './product-card.component';
 import { ProductsComponent } from './products.component';
+import { CouponCardComponent } from './coupon-card.component';
+import { CouponsComponent } from './coupons.component';
 
 import { CartService } from './cart.service';
 
@@ -27,6 +29,8 @@ import { CartService } from './cart.service';
     AppComponent,
     ProductCardComponent,
     ProductsComponent,
+    CouponCardComponent,
+    CouponsComponent,
   ],
   providers: [ 
     CartService

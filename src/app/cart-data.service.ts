@@ -8,6 +8,10 @@ export class CartDataService implements InMemoryDbService {
       { id: 3, name: 'Product 4', quantity: 0 },
       { id: 4, name: 'Product 5', quantity: 0 }
     ];
-    return {cart};
+    const coupons = [
+      { id: 0, name: 'Coupon 1', productName: 'Product 1', description: 'Any ONE (1) package of Product 1', expirationDate: '03/03/18', url: 'http://url.to.coupon', isClipped: false},
+      { id: 1, name: 'Coupon 2', productName: 'Product 2', description: 'Any ONE (1) package of Product 2', expirationDate: '03/03/18', url: 'http://url.to.coupon', isClipped: false},
+    ]
+    return {cart, coupons};
   }
 }

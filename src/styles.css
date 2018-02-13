@@ -20,6 +20,7 @@ body, input[text], button {
 a {
   cursor: pointer;
   cursor: hand;
+  color: #E41720;
 }
 button {
   font-family: Arial;
@@ -111,4 +112,11 @@ ul {
   left: 50%;
   margin-top: -0.75rem;
   margin-left: -0.75rem;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	fill: currentColor;
 }

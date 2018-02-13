@@ -1,0 +1,21 @@
+<div class="coupon-card-inner" [class.clipped]="isClipped">
+    <span class="corner">
+        <svg class="icon-scissors">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-scissors"></use>
+        </svg>
+    </span>
+    <span class="folded-corner"></span>
+    <span class="name">{{coupon.name}}</span>
+    <span class="description">
+        <span class="product-name">{{coupon.productName}}</span>
+        <span>{{coupon.description}}</span>
+    </span>
+    <div class="controls">
+        <span class="terms">
+            <span>One time coupon</span>
+            <span class="expiration">Expires<br> {{coupon.expirationDate}}</span>
+        </span>
+        <a *ngIf="isClipped" href="{{coupon.url}}">Shop Offer</a>
+        <button class="clip" [disabled]="isClipped" [class.loading]="isBusy" (click)="clip()">{{isClipped ? clippedText : clipText}}</button>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+@media (min-width: 400px) {
+  li {
+    width: 50%;
+  }
+}
+
+@media (min-width: 800px) { 
+  li {
+    width: 33%;
+  }
+}
+
+.coupon-card {
+  display: flex;
+  height: 100%;
+}
